@@ -1,0 +1,54 @@
+/* Initially set the button to not display */
+.shortcuts-edit {
+  display: none;
+}
+
+/* When hovering over .shortcuts or when in editable state, display the .shortcuts-edit button */
+.shortcuts:hover .shortcuts-edit,
+.shortcuts[data-state="editable"] .shortcuts-edit {
+  display: block;
+}
+
+@keyframes jiggle {
+  0% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+
+.jiggly {
+  animation: jiggle 0.4s infinite;
+  cursor: move;
+}
+
+.p-app-icon_manage {
+  display: none;
+}
+
+/* When shortcuts are in editable mode */
+.shortcuts[data-state="editable"] .p-app-icon_manage {
+  /* Show the manage icon */
+  display: flex;
+}
+
+.p-app-icon_manage [manage-action="add"],
+.p-app-icon_manage [manage-action="remove"] {
+  display: none;
+}
+
+.p-app-icon_wrap[data-state="hidden"]
+  .p-app-icon_manage[manage-state="add"]
+  [manage-action="add"] {
+  display: block;
+}
+
+.p-app-icon_wrap[data-state="visible"]
+  .p-app-icon_manage[manage-state="remove"]
+  [manage-action="remove"] {
+  display: block;
+}
