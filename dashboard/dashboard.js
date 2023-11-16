@@ -43,13 +43,13 @@ document.addEventListener("DOMContentLoaded", function () {
         "3-17": "Luck of the Irish to you, {name}!",
         "3-8": "Celebrate women, {name}!",
         "4-22": "Love our Earth, {name}.",
-        "9-21": "Peace prevails, {name}."
+        "9-21": "Peace prevails, {name}.",
       };
 
       const timeGreetings = {
         morning: "Good morning, {name}!",
         afternoon: "Good afternoon, {name}!",
-        evening: "Good evening, {name}!"
+        evening: "Good evening, {name}!",
       };
 
       const timeOfDay =
@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const items = document.querySelectorAll(".p-app-icon_wrap");
     const state = Array.from(items).map((item) => ({
       dataId: item.getAttribute("data-id"),
-      dataState: item.getAttribute("data-state")
+      dataState: item.getAttribute("data-state"),
     }));
 
     localStorage.setItem("shortcutsState", JSON.stringify(state));
@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function () {
       chosenClass: "sortable-chosen",
       dragClass: "sortable-drag",
       swapThreshold: 0.65,
-      onUpdate: saveStateToLocalStorage
+      onUpdate: saveStateToLocalStorage,
     });
   });
   // Restore the state from Local Storage
