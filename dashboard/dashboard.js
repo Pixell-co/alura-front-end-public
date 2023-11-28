@@ -303,3 +303,25 @@ document.addEventListener("click", function (event) {
     handleNewsItemDisplay(clickedDataId);
   }
 });
+
+//--------------------------- Account upgrades ---------------------------//
+
+// Immediately-invoked function to encapsulate the code
+(function () {
+  // Parse URL query parameters
+  var params = new URLSearchParams(window.location.search);
+
+  // Check if 'user' parameter is 'upgraded' and if the element exists
+  if (
+    params.get("user") === "upgraded" &&
+    document.getElementById("account-upgrade")
+  ) {
+    // Set the data-state attribute
+    document
+      .getElementById("account-upgrade")
+      .setAttribute("data-state", "open");
+
+    // Trigger the confetti
+    launchConfetti();
+  }
+})();
