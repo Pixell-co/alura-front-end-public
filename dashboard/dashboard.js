@@ -249,7 +249,7 @@ function addHelpMenuListener(elementId) {
   }
 }
 
-// Existing code to add event listeners remains the same
+// Add event listeners
 addHelpMenuListener("shortcut_help");
 addHelpMenuListener("sidebar_help");
 
