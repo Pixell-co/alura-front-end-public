@@ -98,10 +98,10 @@ document.addEventListener("DOMContentLoaded", function () {
     if (
       typeof CommonObj !== "undefined" &&
       CommonObj.user_profile_obj &&
-      CommonObj.user_profile_obj.fname
+      CommonObj.user_profile_obj.first_name
     ) {
       clearInterval(checkInterval); // Clear the check if CommonObj is defined.
-      let currentName = CommonObj.user_profile_obj.fname;
+      let currentName = CommonObj.user_profile_obj.first_name;
 
       if (!nameFromStorage || currentName !== nameFromStorage) {
         localStorage.setItem("userName", currentName); // Update the name in storage.
